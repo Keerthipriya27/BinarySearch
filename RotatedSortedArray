@@ -1,0 +1,30 @@
+def rotatedSortedArray(arr,key):
+    low=0
+    high=len(arr)-1
+    while(low<=high):
+        mid=(low+high)//2
+        if(arr[mid]==key):
+            return mid
+        #left half
+        if(arr[low]<=arr[mid]):
+            #check value exist in half
+            if(arr[low]<=key<=arr[mid]):
+                high=mid-1
+            else:
+                low=mid+1
+        #right half
+        if(arr[low]<=arr[mid]):
+            #check value exist in half
+            if(arr[low]<=key<=arr[mid]):
+                low=mid+1
+            else:
+                high=mid-1
+    return -1
+arr=list(map(int,input().split()))
+key=int(input())
+print(rotatedSortedArray(arr,key))
+
+# rotated sorted array2
+# add if(arr[low]==arr[mid]==arr[high])
+# low+=1
+#high-=1
