@@ -4,5 +4,7 @@ The three variations in the Binarysearch,WHICH INCLUDES:
 2.LowerBound
 3.FloorSquareRoot
 4.NthRoot
+5.RotatedSortedArray
+6.
 
 
